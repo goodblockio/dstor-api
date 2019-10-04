@@ -8,7 +8,6 @@ Welcome to dStor's API documentation!
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
 
 Quickstart
 ==========
