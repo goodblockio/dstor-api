@@ -1,9 +1,6 @@
 Welcome to the dStor developer API
 ==================================
 
-Quickstart
-==========
-
 **https://a.dstor.cloud/v0/<dev key>/<store|release|list|stat>[?id=]**
 
 Reference
