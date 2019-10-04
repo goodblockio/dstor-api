@@ -1,5 +1,5 @@
-Welcome to the dStor developer API
-==================================
+dStor developer API
+===================
 
 **https://a.dstor.cloud/v0/<dev key>/<store|release|list|stat>[?id=]**
 
@@ -8,7 +8,7 @@ Reference
 
 .. http:get::  /v0/<dev key>/list
 
-    Retrieve a list of stored files
+    Retrieve a list of stored files.  Returns a JSON array with every object a developer has stored.
 
     **Example**
 
@@ -21,12 +21,12 @@ Reference
     .. sourcecode:: js
 
       [
-        ["QmX9b1UChdeCdBXTjFx7o6dAPdHKmMfRFshQWJbEHCWrKe", "telos-logo.png"]
+        { file_hash: "QmX9b1UChdeCdBXTjFx7o6dAPdHKmMfRFshQWJbEHCWrKe", file_name: "telos-logo.png" }
       ]
 
 .. http:get::  /v0/<dev key>/stat
 
-    Retrieve info about a stored file
+    Retrieve info about a stored file.  Returns a JSON hash with all of the metadata known about an object.
 
     **Example**
 
@@ -49,7 +49,7 @@ Reference
 
 .. http:get::  /v0/<dev key>/release
 
-    Release stored file
+    Release a stored object.  Objects that are released may still be accessible after the action.
 
     **Example**
 
@@ -67,7 +67,7 @@ Reference
 
 .. http:post::  /v0/<dev key>/store
 
-    Store file
+    Store an object.
 
     **Example**
 
